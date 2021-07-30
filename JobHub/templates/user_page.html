@@ -1,0 +1,19 @@
+{% block content %}
+<p class="whitespace">
+<div class="headerbackground text-center">
+    <p class="whitespace">
+    <h1 class = "title"> {{ subtitle }} </h1>
+    <h4 class = "text mb-2 text-muted"> <small>Welcome to your personalized page. </small></h4>
+</div>
+
+{% for url in names %}
+ <div class="card" style="width: 100%"> 
+   <ul class="list-group list-group-flush">  
+      <li class="list-group-item">  <img src="{{ url }}"></li> 
+   </ul> 
+ </div> 
+
+{% endfor %}
+<p class="whitespace">
+<a class="btn btn-lg btn-secondary title" href="/selection" role="button">Add Job</a>
+{% endblock content %}
