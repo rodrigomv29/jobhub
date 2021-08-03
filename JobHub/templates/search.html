@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Search for job</title>
+    </head>
+    <body>
+  
+        <div>
+            {% from "_form_helper.html" import render_field %}
+            <form method="post">
+              <dl>
+                <p>
+                    {{ render_field(form.search) }}
+                </p>
+              </dl>
+              <p>
+                  <input type="submit" value="Search">
+                </p>
+            </form>        
+        </div>
+    </body>
+</html>

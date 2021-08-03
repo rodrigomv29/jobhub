@@ -1,43 +1,49 @@
+{% extends "layout.html" %}
 {% block content %}
-    <p class="whitespace">
-    <div class="content-section">
-        <form method="POST" action="">
-            {{ form.hidden_tag() }}
-            <fieldset class="form-group">
-          
-     <div class="form-group">
-     {{ form.username.label(class="form-control-label") }}
-     {% if form.username.errors %}
-       {{ form.username(class="form-control form-control-lg is-invalid") }}
-       <div class="invalid-feedback">
-         {% for error in form.username.errors%}
-             <span>{{error}}</span>
-         {% endfor %}
-       </div>
-   {% else %}
-       {{ form.username(class="form-control form-control-lg") }}
-   {% endif %}
- </div>
-     
-     <div class="form-group">
-         {{ form.password.label(class="form-control-label") }}
-         {% if form.password.errors %}
-           {{ form.password(class="form-control form-control-lg is-invalid") }}
-           <div class="invalid-feedback">
-             {% for error in form.password.errors%}
-                 <span>{{error}}</span>
-             {% endfor %}
-           </div>
-       {% else %}
-           {{ form.password(class="form-control form-control-lg") }}
-       {% endif %}
-     </div>
-                
- </fieldset>
-          <div class="form-group">
-             {{ form.submit(class="btn btn-outline-info") }}
+<div class="login">
+   <div class="title">
+       <h3><b>Login</b></h3>
+  </div>
+       <p class="whitespace">
+       <div class="content-section">
+           <form method="POST" action="">
+               {{ form.hidden_tag() }}
+               <fieldset class="form-group">
+
+        <div class="form-group">
+        {{ form.username.label(class="form-control-label") }}
+        {% if form.username.errors %}
+          {{ form.username(class="form-control form-control-lg is-invalid") }}
+          <div class="invalid-feedback">
+            {% for error in form.username.errors%}
+                <span>{{error}}</span>
+            {% endfor %}
           </div>
-         </form>
-     </div>
-<p class="whitespace">
+      {% else %}
+          {{ form.username(class="form-control form-control-lg") }}
+      {% endif %}
+    </div>
+
+        <div class="form-group">
+            {{ form.password.label(class="form-control-label") }}
+            {% if form.password.errors %}
+              {{ form.password(class="form-control form-control-lg is-invalid") }}
+              <div class="invalid-feedback">
+                {% for error in form.password.errors%}
+                    <span>{{error}}</span>
+                {% endfor %}
+              </div>
+          {% else %}
+              {{ form.password(class="form-control form-control-lg") }}
+          {% endif %}
+        </div>
+
+    </fieldset>
+             <div class="form-group-button">
+                {{ form.submit(class="btn btn-outline-info") }}
+             </div>
+            </form>
+        </div>
+   <p class="whitespace">
+</div>
  {% endblock content %}

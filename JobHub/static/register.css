@@ -1,0 +1,45 @@
+.register{
+    color: white;
+    font-family: poppins;
+    height: 800px;
+    padding-top: 6%;
+    text-align: center;
+ }
+    
+.register h3{
+   color: white;
+   font-size: 30px;
+   font-weight: bolder;
+   padding-bottom: 10px;
+}
+
+.form-group{
+  justify-content: center;
+  padding-right: 30px;
+  border: none;
+  text-align: center;
+  height: 100px;
+  width: 60%;
+  display: inline-block;
+  font-weight: bolder;
+}
+
+.form-control-lg{
+   background-color: white;
+   float: right;
+   text-align: center;
+}
+
+.form-group-button{
+   justify-items: center;
+   padding-top: 300px;
+   width: 30%;
+}
+input{
+   display: inline-block;
+   height: 30px;
+   width: 70%;
+   padding: 5px 10px;
+}
+
+

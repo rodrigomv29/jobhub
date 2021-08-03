@@ -4,38 +4,26 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width-=device-width, initial-scale=1, shrink-to-fit=no">
       <link rel="stylesheet" type=text/css href="https://fonts.googleapis.com/css?family=Poppins" />
-      <link rel="stylesheet" href="static/home.css">
+      <link rel="stylesheet" href="static/layout.css">
+      <link rel="stylesheet" href="static/login.css">
+      <link rel="stylesheet" href="static/register.css">
    </head>
    <body>
-      <div class="navbar">
-         <ul>
-           <li><a href="/">JobHub</a></li>
-            <li><a href="/about">About</a></li>
-           <li><a href="/career">Career</a></li>
-           <div class="search-container">
-            <form method="GET">
-               <input type="search" placeholder="Search.." name="search" size="80">
-               <button type="submit">Search</button>
-             </form>      
-<!--              <form action="/action_page.php">
-               <input type="text" placeholder="Search.." name="search" size="80">
-               <button type="button">Search</button>
-             </form> -->
-           </div>
-         </ul>
-      </div>
-      <div class="home-page-container">
-         <div class="middle-container">
-            <div class="left-side">
-               <h1>Welcome to <br> JobHub</h1>
-            </div>
+      <div class="navbar-container">
+         <div class="navbar">
+            <ul>
+              <li><a href="/home">JobHub</a></li>
+              <li><a href="/career">Career</a></li>
+              <li><a href="/career">News Feed</a></li>
+              <li><a href="/register">Register</a></li>
+              <li><a href="/login">Login</a></li>
+            </ul>
          </div>
       </div>
+      <div class="body">
+      {% block content %}{% endblock %}
+      </div>
    </body>
-   <div class="portal">
-      <h1>Welcome back, Kolade</h1>
-   </div>
-    {% block content %}{% endblock %}
    <div class="bottom-footer">
      <center>
              <br />

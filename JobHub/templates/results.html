@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+  
+<html>
+<head>
+    <title>For loop of jobs</title>
+</head>
+<body>
+<!---#
+#         title = job['title']
+#         location = job['location']
+#         snippet = job['snippet']
+#         salary = job['salary']
+#         source = job['source']
+#         job_type = job['type']
+#         link = job['link']
+#         company = job['company']
+#         job = job['updated']
+#         job_id = job['id'] --->
+<ol>
+<!-- For loop logic of jinja template -->
+{%for i in range(0, 10)%}
+    <div class="result_card">
+        <div>
+            <h3 class="job_title">{{jobs[i]['title']}}</h3>
+            <h4 class="company_name">{{jobs[i]['company']}}</h4>
+        </div>
+        <div>
+            <p>{{jobs[i]['snippet']}}</p>
+            <p>{{jobs[i]['salary']}}</p>
+        </div>
+    </div>
+{%endfor%}
+  
+</ol>
+  
+</body>
+</html>

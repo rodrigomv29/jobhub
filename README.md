@@ -26,6 +26,9 @@ DATABASE:
 Steps:
 
 - [x] Do presentation.
+- [x] Get the Jooblee API working.
+- [x] Get the Hacker News API working.
+- [x] Get the Youtue API working.
 * Get the API's working.
 * See the info they return and find similarities.
 - [x] Copy and use an alredy existing front end.

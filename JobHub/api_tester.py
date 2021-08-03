@@ -5,7 +5,8 @@ BASE_URL = "https://jooble.org/api/"
 #request headers
 headers = {"Content-type": "application/json"}
 #json query
-body = '{ "keywords": "it", "location": "Bern"}'
+body = '{ "keywords": "it, software", "location": "United States"}'
 response = requests.post(BASE_URL + API_KEY, data=body, headers=headers)
 print(response.json()['jobs'][0])
+# print(response.json())
 
