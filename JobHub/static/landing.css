@@ -41,26 +41,28 @@ li a:hover {
 }
 * {box-sizing: border-box;}
 
-.image{
-   padding-top: 200px;
-   float: left;
-   margin: auto;
-   width: 5%;
-   height: 10px;
 
+.navbar a {
+  float: left;
+  display: block;
+  color: ;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
 .search-container {
-   display: flex;
-   flex-direction: row;
-   width: 30%;
-   border: 1px solid grey;
-   border-radius: 5px;
-   height: 55px;
-   padding: 2px 23px 2px 30px;
-   outline: 0;
-   background-color: #f5f5f5;
-   text-align: center;
-   float: right;
+  float: right;
 }
 
 input[type=text] {
@@ -71,8 +73,8 @@ input[type=text] {
 }
 
 .search-container button {
-  float: center;
-  padding: 18px 20px;
+  float: right;
+  padding: 6px;
   margin-top: 8px;
   margin-right: 16px;
   background: #ddd;
@@ -84,11 +86,12 @@ input[type=text] {
 .search-container button:hover {
   background: #ccc;
 }
+
 @media screen and (max-width: 600px) {
-  .search-container {
+.search-container {
     float: none;
   }
-  input[type=text], .search-container button {
+a, input[type=text], .search-container button {
     float: none;
     display: block;
     text-align: left;
@@ -96,9 +99,17 @@ input[type=text] {
     margin: 0;
     padding: 14px;
   }
-  input[type=text] {
+input[type=text] {
     border: 1px solid #ccc;  
   }
+}
+
+.image{
+   padding-top: 200px;
+   float: left;
+   margin: auto;
+   width: 5%;
+   height: 10px;
 }
 
 .left-side{
@@ -130,7 +141,7 @@ input[type=text] {
    margin: auto;
    padding: auto;
    width: 60%;
-   height: 680px;
+   height: 660px;
 }
 
 .aboutus h1{

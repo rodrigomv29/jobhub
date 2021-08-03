@@ -90,7 +90,7 @@ def user(name):
         tracker = []
         y = []
         if os.path.exists('JobHub/static/'+name):
-            for filename in os.listdir("yahoo_finance_project/website/static/"+name):
+            for filename in os.listdir("JobHub/static/"+name):
                 if name in str(filename):
                     tracker.append(str(filename))
             for x in tracker:
