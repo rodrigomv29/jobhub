@@ -6,6 +6,7 @@ import os, glob
 from forms import RegistrationForm, Login
 import requests
 from forms import SearchForm
+from hackernews import *
 
 
 app = Flask(__name__)
@@ -54,7 +55,8 @@ def career():
 
 @app.route("/feed")
 def feed():
-    return render_template('feed.html')
+    stories = story_list
+    return render_template('feed.html', stories=stories)
 
 @app.route("/about")
 def about():
