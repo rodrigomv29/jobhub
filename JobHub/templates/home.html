@@ -10,17 +10,14 @@
       <div class="navbar">
          <ul>
            <li><a href="/">JobHub</a></li>
-            <li><a href="/about">About</a></li>
+           <li><a href="/about">About</a></li>
            <li><a href="/career">Career</a></li>
+           <li><a href="/feed">News Feed</a></li>
            <div class="search-container">
-            <form method="GET">
-               <input type="search" placeholder="Search.." name="search" size="80">
-               <button type="submit">Search</button>
-             </form>      
-<!--              <form action="/action_page.php">
-               <input type="text" placeholder="Search.." name="search" size="80">
-               <button type="button">Search</button>
-             </form> -->
+             <form method="GET">
+               <input type="text" placeholder="Search.." name="search">
+               <button type="submit">Submit</button>
+             </form>
            </div>
          </ul>
       </div>
@@ -32,9 +29,6 @@
          </div>
       </div>
    </body>
-   <div class="portal">
-      <h1>Welcome back, Kolade</h1>
-   </div>
     {% block content %}{% endblock %}
    <div class="bottom-footer">
      <center>

@@ -1,37 +1,32 @@
-<!DOCTYPE html>
-  
-<html>
-<head>
-    <title>For loop of jobs</title>
-</head>
-<body>
-<!---#
-#         title = job['title']
-#         location = job['location']
-#         snippet = job['snippet']
-#         salary = job['salary']
-#         source = job['source']
-#         job_type = job['type']
-#         link = job['link']
-#         company = job['company']
-#         job = job['updated']
-#         job_id = job['id'] --->
-<ol>
-<!-- For loop logic of jinja template -->
-{%for i in range(0, 10)%}
-    <div class="result_card">
-        <div>
-            <h3 class="job_title">{{jobs[i]['title']}}</h3>
-            <h4 class="company_name">{{jobs[i]['company']}}</h4>
-        </div>
-        <div>
-            <p>{{jobs[i]['snippet']}}</p>
-            <p>{{jobs[i]['salary']}}</p>
-        </div>
-    </div>
-{%endfor%}
-  
-</ol>
-  
-</body>
-</html>
+{% extends "layout.html" %}
+{% block content %}
+<div class=fullpage>
+   <h1> Job Search Results</h1>
+<!--    <ol> -->
+      <div class="result-container">
+         <!-- For loop logic of jinja template -->
+         {%for i in range(0, 10, 2)%}
+          <div class="row">
+             {%for j in range(i, i+2)%}
+             <div class="column">
+                 <div class="result_card">
+                     <div class="ind-result">
+                         <h3 class="job_title">{{jobs[j]['title']}}</h3>
+                         <h4 class="company_name">{{jobs[j]['company']}}</h4>
+                         <div class="result-card-text">
+                             <a href="{{jobs[j]['link']}}"><p>click the link for more info</p></a>
+                         </div>
+                     </div>
+                    <div class="save">
+                       <button type="button">Save</button>
+                    </div>
+                 </div>
+             </div>
+             {%endfor%}
+         </div>
+         {%endfor%}
+      </div>
+      
+<!--    </ol> -->
+</div>
+{% endblock content %}

@@ -1,42 +1,70 @@
 .login{
-    color: white;
+    margin: auto;
+    color: #8860D0;
     font-family: poppins;
     height: 800px;
     padding-top: 8%;
     text-align: center;
  }
-    
+
+.login-box{
+   margin: auto;
+   height: 400px;
+   background-color: #ddd3ee;
+   width: 40%;
+   box-shadow: 5px 5px 5px #8860D0;
+   border-radius: 10px;
+}
 .login h3{
-   color: white;
+   color: #8860D0;
    font-size: 30px;
    font-weight: bolder;
    padding-bottom: 10px;
 }
-
+.title{
+   padding-top: 10px;
+}
 .form-group{
-  justify-content: center;
-  padding-right: 30px;
+  margin: auto;
+  padding: 8px;
   border: none;
-  text-align: center;
-  height: 100px;
-  width: 60%;
+  width: 100%;
   display: inline-block;
   font-weight: bolder;
 }
 
+.fieldset-group{
+   border: none !important;
+}
+.form-control-label{
+   flex: 1;
+   
+   padding: 16px;
+   float: left;
+   text-align: left;
+}
+
 .form-control-lg{
+   flex: 2;
+   padding: 6px;
+   width: 250px;
+   float: left;
    background-color: white;
-   float: right;
    text-align: center;
 }
 
 .form-group-button{
-   padding-top: 300px;
-   width: 30%;
+   margin: auto;
+   align-content: center;
 }
 input{
+   border: none;
    display: inline-block;
    height: 30px;
-   width: 70%;
+   width: 30%;
 /*    padding: 5px 10px; */
+}
+
+.form-control form-control-lg{
+   width: 100px;
 }

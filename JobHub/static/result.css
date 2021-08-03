@@ -1,0 +1,71 @@
+.fullpage{
+   text-align: center;
+   padding-top: 55px;
+   width: 100%;
+   background-color: white;
+   margin: auto;
+   padding: auto;
+   font-family: poppins;
+}
+
+.fullpage h1{
+   padding-top: 10px;
+   font-size: 30px;
+   text-align: center;
+   color: #8860D0;
+   
+}
+
+.result_card{
+   text-align: center;
+   display: inline-block;
+   margin: auto;
+   border-radius: 25px;
+   background: white;  
+   padding: 5px;
+   height: 260px;
+   width: 300px;
+   text-decoration: none;
+}
+
+.result_card:hover {
+   box-shadow: 5px 5px 5px #8860D0;
+   transition: box-shadow 0.3s ease-in-out;
+   color: #8860D0;
+/*    background: whitesmoke; */
+}
+
+.result-card-text a{
+    text-decoration: none;
+}
+
+.result-container{
+    width: 100%;
+    align-content: center;
+    float: center;
+
+}
+
+
+.row {
+    padding-left: 115px;
+    float: left; 
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    width: 100%;
+    padding: 5px;
+}
+
+/* .column:hover{
+   background: whitesmoke;
+}
+ */
+
+  

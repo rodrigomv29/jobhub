@@ -4,9 +4,21 @@
         <title>Search for job</title>
     </head>
     <body>
-  
+       <div>
+           {% macro render_field(field) %}
+             <dt>{{ field.label }}
+             </dt><dd>{{ field(**kwargs)|safe }}
+             {% if field.errors %}
+                 <ul class="errors">
+                 {% for error in field.errors %}
+                     <li>{{ error }}</li>
+                 {% endfor %}
+                 </ul>
+             {% endif %}
+             </dd>
+        {% endmacro %}
         <div>
-            {% from "_form_helper.html" import render_field %}
+<!--             {% from "_form_helper.html" import render_field %} -->
             <form method="post">
               <dl>
                 <p>
@@ -18,5 +30,6 @@
                 </p>
             </form>        
         </div>
+       </div>
     </body>
 </html>

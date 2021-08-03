@@ -28,6 +28,14 @@ class User(db.Model):
 
     def __repr__(self):
         return f"User('{self.username}', '{self.email}')"
+    
+class SavedJobs(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(20), unique=True, nullable=False)
+    job = db.Column(db.String(150))
+    
+    def __repr__(self):
+        return f"SavedJobs('{self.username}', '{self.job}')"
 
 db.create_all()
 
@@ -60,11 +68,17 @@ def feed():
 
 @app.route("/about")
 def about():
+    search = request.args.get('search')
+    print(search)
+    if request.method == 'GET' and search:
+        #print(str(form.search.data))
+        return redirect((url_for('results', query=search)))  # or what you want
     return render_template('about.html', subtitle='about page', text='This is the about page')
 
 # registration
 @app.route("/register", methods=['GET', 'POST'])
 def register():
+    
     form = RegistrationForm()
     if form.validate_on_submit(): # checks if entries are valid
         pw_hash = bcrypt.generate_password_hash(form.password.data)
@@ -79,6 +93,11 @@ def register():
 # log in if already has an user
 @app.route("/login", methods=['GET', 'POST'])
 def login():
+    search = request.args.get('search')
+    print(search)
+    if request.method == 'GET' and search:
+        #print(str(form.search.data))
+        return redirect((url_for('results', query=search)))  # or what you want
     form = Login()
     if form.validate_on_submit(): # checks if entries are valid
         pw_hash = bcrypt.generate_password_hash(form.password.data)
@@ -118,9 +137,23 @@ def search():
     #print(str(form.search.data))
     return render_template('search.html', form=form)
 
+
 @app.route("/results/<query>")
 def results(query):
-    print(query)
+    search = request.args.get('search')
+    save = request.args.get('save')
+    print(search)
+    print(save)
+    if request.method == 'GET' and search:
+        #print(str(form.search.data))
+        return redirect((url_for('results', query=search)))  # or what you want
+    
+    if request.method == 'GET' and save:
+        # save and unsave option
+        # pop up showing that it saved
+        
+        # add to database!!!
+        pass
     """
     SAMPLE RESPONSE
     {
@@ -156,17 +189,7 @@ def results(query):
     
 #     return jobs
     return render_template("results.html", jobs=jobs)
-#     for job in jobs:
-#         title = job['title']
-#         location = job['location']
-#         snippet = job['snippet']
-#         salary = job['salary']
-#         source = job['source']
-#         job_type = job['type']
-#         link = job['link']
-#         company = job['company']
-#         job = job['updated']
-#         job_id = job['id']
+
 
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0")

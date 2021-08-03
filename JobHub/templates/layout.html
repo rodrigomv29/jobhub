@@ -4,19 +4,26 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width-=device-width, initial-scale=1, shrink-to-fit=no">
       <link rel="stylesheet" type=text/css href="https://fonts.googleapis.com/css?family=Poppins" />
-      <link rel="stylesheet" href="static/layout.css">
-      <link rel="stylesheet" href="static/login.css">
-      <link rel="stylesheet" href="static/register.css">
+      <link rel="stylesheet" href="/static/layout.css">
+      <link rel="stylesheet" href="/static/login.css">
+<!--       <link rel="stylesheet" href="/static/register.css"> -->
+      <link rel="stylesheet" href="/static/result.css">
    </head>
    <body>
       <div class="navbar-container">
          <div class="navbar">
             <ul>
-              <li><a href="/home">JobHub</a></li>
+              <li><a href="/">JobHub</a></li>
               <li><a href="/career">Career</a></li>
-              <li><a href="/career">News Feed</a></li>
+              <li><a href="/feed">News Feed</a></li>
               <li><a href="/register">Register</a></li>
               <li><a href="/login">Login</a></li>
+              <div class="search-container">
+                 <form method="GET">
+                   <input type="text" placeholder="Search.." name="search">
+                   <button type="submit">Submit</button>
+                 </form>
+               </div>
             </ul>
          </div>
       </div>
