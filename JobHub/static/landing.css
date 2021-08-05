@@ -2,6 +2,7 @@ body{
    margin: 0;
    padding: 0;
    font-family: poppins;
+   font-weight: bolder;
 }
 ul{
    width: 100%;
@@ -23,7 +24,7 @@ li a{
    display: block;
    color: ;
    text-align: center;
-   padding: 18px 20px;
+   padding: 1.1em 20px;
    text-decoration: none;
 }
 
@@ -49,7 +50,7 @@ li a:hover {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 1.1em;
 }
 
 .navbar a:hover {
@@ -65,20 +66,25 @@ a.active {
   float: right;
 }
 
-input[type=text] {
-  padding: 6px;
-  margin-top: 8px;
-  font-size: 17px;
+input[type=text]{
+  width: 700px;
+  padding: .4em;
+  margin-top: .5em;
+  font-size: 1.05em;
   border: none;
+
+}
+img{
+   width: 860px;
 }
 
 .search-container button {
   float: right;
-  padding: 6px;
-  margin-top: 8px;
+  padding: .4em;
+  margin-top: .5em;
   margin-right: 16px;
   background: #ddd;
-  font-size: 17px;
+  font-size: 1.05em;
   border: none;
   cursor: pointer;
 }
@@ -97,7 +103,7 @@ a, input[type=text], .search-container button {
     text-align: left;
     width: 100%;
     margin: 0;
-    padding: 14px;
+    padding: 0.87em;
   }
 input[type=text] {
     border: 1px solid #ccc;  
@@ -105,16 +111,20 @@ input[type=text] {
 }
 
 .image{
-   padding-top: 200px;
-   float: left;
+   padding-top: 20%;
+   float: right;
    margin: auto;
-   width: 5%;
-   height: 10px;
+   margin-right: 10.125em;
+   width: 13%;
+   height: 3.8em;
 }
-
+.middle-container{
+   width: 80%;
+}
 .left-side{
-   width: 100%;
-   font-size: 70px;
+   margin-left: 2.0em;
+   width: 80%;
+   font-size: 60px;
    color: whitesmoke;
    font-family: poppins;
    padding-left: 1%;
@@ -122,11 +132,12 @@ input[type=text] {
 }
 
 .bottom-footer{
+   color: white;
    float:left;
    width: 100%;
    height: 5%;
-   padding: 5px;
-   background-color:  #C1C8E4;
+   padding: 0.3em;
+   background-color: black;
 }
 .about-first-section h1{
    width: 100%;
@@ -140,8 +151,8 @@ input[type=text] {
    text-align: center;
    margin: auto;
    padding: auto;
-   width: 60%;
-   height: 650px;
+   width: 100%;
+   height: 45.6em;
 }
 
 .aboutus h1{
@@ -149,7 +160,7 @@ input[type=text] {
 }
 
 .about-first-section p{
-   font-size: 20px;
+   font-size: 1.25em;
    text-align: center;
    color: #36454f
 }
@@ -164,14 +175,14 @@ input[type=text] {
    float: left;
    margin: auto;
    color: #8860D0;
-   height: 200px;
-   padding: 10px;
+   height: 12.5em;
+   padding: .8em;
    text-align: center;
 }
 .end-section{
    color: whitesmoke;
    padding-top: 40px;
-   background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)),url("search-1.jpg");
+   background-image: linear-gradient(to bottom, rgba(0, 0, 0, .1), rgba(0, 0, 0, 1)),url("search-1.jpg");
    height: 450px;
    text-align: center;
    float: left;
@@ -180,15 +191,15 @@ input[type=text] {
 }
 
 .end-section h2{
-   color:  #8860D0;
-   padding-top: 50px;
+   color:  white;
+   padding-top: 20px;
 }
 
 .end-section p{
-   font-size: 20px;
+   font-size: 1.25em;
    padding-top: 10px;
 }
 
 .end-section span{
-   color:  #36454f;
+   color:  white;
 }

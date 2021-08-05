@@ -1,24 +1,26 @@
-{% extends "layout.html" %}
+{% extends "layout2.html" %}
 {% block content %}
-<head>
-    <link rel="stylesheet" href="../static/feed.css">
-</head>
-
-<body>
-{% for story in stories %}
-<div class="news-post">
-    <div class="news-post__img">
-        <img src="..\static\images\news.jpg" alt="">
-    </div>
-    <div class="news-post__info">
-        <h1 class="news-post__title">{{story.title}}</h1>
-        <div class="news-post__date">
-            <span>{{story.time}}</span>
-        </div>
-        <p class="news-post__text">Click "Read More" to be redirected to the article</p>
-        <a href="{{story.link}}" class="news-post__cta">Read More</a>
-    </div>
+<div class=fullpage1>
+   <h1> Catch up on the news</h1>
+<!--    <ol> -->
+      <div class="result-container1">
+         {% for story in stories %}
+         <div class="row1">
+            <div class="result_card1">
+                  <div class="news-post__img">
+                     <img src="..\static\news.jpg" alt="">
+                  </div>
+                  <div class="news-post__info">
+                    <h3 class="news-post__title">{{story.title}}</h3>
+                    <div class="news-post__date">
+                        <span>{{story.time}}</span>
+                    </div>
+                    <p class="news-post__text">Click "Read More" to be redirected to the article</p>
+                    <a href="{{story.link}}" class="news-post__cta">Read More</a>
+                  </div>
+           </div>
+         </div>
+          {%endfor%}
+   </div>
 </div>
-{% endfor %}
-</body>
-{% endblock %}
+{% endblock content %}     

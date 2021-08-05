@@ -54,3 +54,18 @@ class User(db.Model):
 
     def __repr__(self):
         return f"User('{self.username}', '{self.email}')"
+    
+    """
+    >>> user = User(username="ziyad", email="z@google.com", password="12345")
+>>> SavedJob(title="Software", link="www.google.com", user=user)
+<Post 'Software'>
+>>> user.saved_jobs
+[<Post 'Software'>]
+>>> o = SavedJob(title="Only fans", link="www.google.com")
+>>> user.saved_jobs
+[<Post 'Software'>]
+>>> user.saved_jobs.append(o)
+>>> user.saved_jobs
+[<Post 'Software'>, <Post 'Only fans'>]
+>>> 
+"""

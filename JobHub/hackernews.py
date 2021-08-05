@@ -39,5 +39,5 @@ for article_id in data:
         counter += 1
     #print()
     #print(story_list[0].title)
-    if counter == 26:
+    if counter == 11:
         break

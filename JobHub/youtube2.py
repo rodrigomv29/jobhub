@@ -12,11 +12,11 @@ youtube = build('youtube', 'v3', developerKey=api_key)
 
 print(youtube)
 
-req = youtube.search().list(q='interview', part='snippet', type='video', maxResults = 1)
+req = youtube.search().list(q='job resume', part='snippet', type='video', maxResults = 1)
 
 res = req.execute()
 
-video_list = []
+resume_list = []
 
 #youtube_json = res.json()
 
@@ -29,10 +29,8 @@ video_list = []
 for item in res['items']:  # print all the titles(minor change to this in order to print the URL's of the videos in the web page)
     video_title = item['snippet']['title']
     video_url = "https://www.youtube.com/watch?v=" + item['id']['videoId']
-    video_list.append(Video(video_title, video_url))
+    resume_list.append(Video(video_title, video_url))
     
     #print(item['snippet']['title'])
     #print("https://www.youtube.com/watch?v=" + item['id']['videoId'])
     #print(item['snippet']['description'])
-
-      

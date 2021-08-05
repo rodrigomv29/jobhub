@@ -1,20 +1,38 @@
 {% extends "home.html" %}
 {% block content %}
-<p class="whitespace">
-<div class="headerbackground text-center">
-    <p class="whitespace">
-    <h1 class = "title"> {{ subtitle }} </h1>
-    <h4 class = "text mb-2 text-muted"> <small>Welcome to your personalized page. </small></h4>
+<div class="fullpage">
+   <p class="whitespace">
+   <div class="headerbackground-text-center">
+       <p class="whitespace"></p>
+       <h1 class = "title"> {{ subtitle }} </h1>
+       <h4 class = "text mb-2 text-muted"> <small>Welcome to your personalized page<br> View saved jobs</small></h4>
+   </div>
+
+   {% for url in names %}
+    <div class="card" style="width: 100%"> 
+      <ul class="list-group list-group-flush">  
+         <li class="list-group-item">  <img src="{{ url }}"></li> 
+      </ul> 
+    </div> 
+
+   {% endfor %}
+   <div class="result-container">
+            <!-- For loop logic of jinja template -->
+            {%for i in range(0, size)%}
+             <div class="row">
+                    <div class="result_card">
+                        <div class="ind-result">
+                            <h3 class="job_title">{{jobs[i].title}}</h3>
+                            <h4 class="company_name">{{jobs[i].company}}</h4>
+                            <div class="result-card-text">
+                                <a href="{{jobs[i].link}}"><p>click the link for more info</p></a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            {%endfor%}
+   </div>
+   <p class="whitespace"></p>
 </div>
 
-{% for url in names %}
- <div class="card" style="width: 100%"> 
-   <ul class="list-group list-group-flush">  
-      <li class="list-group-item">  <img src="{{ url }}"></li> 
-   </ul> 
- </div> 
-
-{% endfor %}
-<p class="whitespace">
-<a class="btn btn-lg btn-secondary title" href="/search" role="button">Add Job</a>
 {% endblock content %}

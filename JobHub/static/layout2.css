@@ -4,7 +4,7 @@ body{
    font-family: poppins;
    width: 100%;
    height: 90%;
-   background-image: url("purple.jpg");
+   background-image: white;
    overflow: none;
    background-repeat: no-repeat;
 }
@@ -68,19 +68,21 @@ a.active {
 
 .search-container {
   float: right;
-    width: 33%;
+  width: 33%;
+}
+
+.search-container form{
+   float: right;
 }
 
 input[type=text] {
+  width: 500px;
   padding: 6px;
   margin-top: 8px;
   font-size: 17px;
   border: none;
 }
 
-.search-container input{
-    width: 530px;
-}
 .search-container button {
   padding: 6px;
   margin-top: 8px;

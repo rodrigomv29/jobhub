@@ -37,18 +37,17 @@
    border: none !important;
 }
 .form-control-label{
-   flex: 1;
-   
    padding: 16px;
    float: left;
    text-align: left;
 }
 
 .form-control-lg{
-   flex: 2;
+   margin: 8px;
+   margin-right: 20%;
    padding: 6px;
-   width: 250px;
-   float: left;
+   width: 60%;
+   float: right;
    background-color: white;
    text-align: center;
 }
@@ -58,6 +57,7 @@
    align-content: center;
 }
 input{
+
    border: none;
    display: inline-block;
    height: 30px;
@@ -67,4 +67,11 @@ input{
 
 .form-control form-control-lg{
    width: 100px;
+}
+
+img{
+   height: 300px;
+   width: 400px;
+   margin-right: 75%;
+
 }

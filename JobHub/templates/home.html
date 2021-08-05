@@ -5,31 +5,34 @@
       <meta name="viewport" content="width-=device-width, initial-scale=1, shrink-to-fit=no">
       <link rel="stylesheet" type=text/css href="https://fonts.googleapis.com/css?family=Poppins" />
       <link rel="stylesheet" href="static/home.css">
+      <link rel="stylesheet" href="static/user_page.css">
    </head>
    <body>
       <div class="navbar">
          <ul>
            <li><a href="/">JobHub</a></li>
-           <li><a href="/about">About</a></li>
-           <li><a href="/career">Career</a></li>
            <li><a href="/feed">News Feed</a></li>
+           <li><a href="/interview">Interview prep</a></li>
+           <li><a href="/resume">Resume building</a></li>
+           <li><a href="/register">Register</a></li>
+           <li><a href="{{link}}">{{user}}</a></li>
            <div class="search-container">
              <form method="GET">
                <input type="text" placeholder="Search.." name="search">
                <button type="submit">Submit</button>
              </form>
            </div>
+           <li><a class="btn btn-lg btn-secondary title" href="/logout" role="button">Logout</a></li>
          </ul>
       </div>
       <div class="home-page-container">
          <div class="middle-container">
             <div class="left-side">
-               <h1>Welcome to <br> JobHub</h1>
             </div>
          </div>
       </div>
    </body>
-    {% block content %}{% endblock %}
+   {% block content %}{% endblock %}
    <div class="bottom-footer">
      <center>
              <br />
